@@ -1,14 +1,15 @@
 # pre-commit-terraform hook
 
-Single [pre-commit](http://pre-commit.com/) hook which runs `terraform fmt` on `*.tf` files.
+Collection of [pre-commit](http://pre-commit.com/) hooks for Terraform files.
 
 An example `.pre-commit-config.yaml`:
 
 ```yaml
--   repo: git://github.com/antonbabenko/pre-commit-terraform
-    sha: v1.2.0
+-   repo: git://github.com/strataconsulting/pre-commit-terraform
+    sha: v1.2.0-st1
     hooks:
       -   id: terraform_fmt
-```
+      -   id: tflint
+      -   id: terralint
 
-Enjoy the clean code!
+```
