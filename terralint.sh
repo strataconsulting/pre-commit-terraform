@@ -13,6 +13,6 @@ echo "FILE1=$FILE1" >> /tmp/terralint.log
 echo "DIRECTORY=$DIRECTORY" >> /tmp/terralint.log
 
 # Execute terralint.py providing the directory where the terraform file(s) are located
-SCRIPTDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+SCRIPTDIR=$(dirname "$0")
 echo "SCRIPTDIR=$SCRIPTDIR" >> /tmp/terralint.log
 python "${SCRIPTDIR}/terralint.py" "${DIRECTORY}" >> /tmp/terralint.log
