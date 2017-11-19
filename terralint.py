@@ -26,6 +26,8 @@ class TestAWSResources(unittest.TestCase):
         aws_resources = ["aws_lambda_function", "aws_iam_role"]
         resource_types = ["lambda_function", "iam_role"]
         self.v.resources(aws_resources).property('name').list_should_not_contain(resource_types)
+        # NOTE: The above checking is just for the "name" property of the resource.
+        #       For the actual resoruce name the function "name_should_match_regex" could be used.
 
 if __name__ == '__main__':
     # Execute tests and return success to shell (for pre-commit)
