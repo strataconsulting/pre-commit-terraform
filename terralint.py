@@ -28,5 +28,7 @@ class TestAWSResources(unittest.TestCase):
         self.v.resources(aws_resources).property('name').list_should_not_contain(resource_types)
 
 if __name__ == '__main__':
+    # Execute tests and return success to shell (for pre-commit)
     suite = unittest.TestLoader().loadTestsFromTestCase(TestAWSResources)
-    unittest.TextTestRunner(verbosity=0).run(suite)
+    ret = not unittest.TextTestRunner(verbosity=0).run(suite).wasSuccessful()
+    sys.exit(ret)
