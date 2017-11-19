@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -x
+
 # TerraLint doest work file by file. It analize the entire directory
 # Therefore, take the base directory of the first file as argument
 FILE1=$1
