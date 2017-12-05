@@ -6,7 +6,7 @@ An example `.pre-commit-config.yaml`:
 
 ```yaml
 -   repo: git://github.com/strataconsulting/pre-commit-terraform
-    sha: v1.2.0-st1
+    sha: v1.2.0-st2
     hooks:
       -   id: terraform_fmt
       -   id: tflint
