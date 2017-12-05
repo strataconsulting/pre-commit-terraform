@@ -31,6 +31,7 @@ class TestAWSResources(unittest.TestCase):
        "aws_iam_group",
        "aws_iam_policy",
        "aws_iam_role",
+       "aws_iam_role_policy",
        "aws_iam_user",
        "aws_instance",
        "aws_key_pair",
