@@ -52,7 +52,7 @@ class TestAWSResources(unittest.TestCase):
         "Name",
         "Description",
         "Owner",
-        "Release"
+        "Provisioner"
     ]
 
     def setUp(self):
@@ -73,7 +73,8 @@ class TestAWSResources(unittest.TestCase):
         # of just check if "aws_iam_group" is part of the name, we check against the use of "iam_group"
         check_list = []
         for aws_resource in self.AWS_RESOURCES:
-            check_list.extend(aws_resource.replace("aws_",""))
+            check_resource = aws_resource.replace("aws_", "")
+            check_list.append(check_resource)
         self.v.resources(self.AWS_RESOURCES).property('name').list_should_not_contain(check_list)
         # NOTE: The above checking is just for the "name" property of the resource.
         #       For the actual resoruce name the function "name_should_match_regex" could be used.
