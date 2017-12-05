@@ -78,7 +78,7 @@ class TestAWSResources(unittest.TestCase):
             check_list.append(check_resource)
         self.v.resources(self.AWS_RESOURCES).property('name').list_should_not_contain(check_list)
         # NOTE: The above checking is just for the "name" property of the resource.
-        #       For the actual resoruce name the function "name_should_match_regex" could be used.
+        #       For the actual resource name the function "name_should_match_regex" could be used.
 
 if __name__ == '__main__':
     # Execute tests and return success to shell (for pre-commit)
