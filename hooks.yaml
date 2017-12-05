@@ -12,10 +12,10 @@
     language: script
     files: \.tf$
     exclude: \.+.terraform\/.*$
--   id: terralint
-    name: Customized Terraform linting
-    description: TerraLint is a set of custom rules (require specific tags, enforce naming conventions, etc) that can't be enforced via tflint. It's based on https://github.com/elmundio87/terraform_validate.
-    entry: terralint.sh
+-   id: tfrules
+    name: Terraform rules
+    description: TFRules is a set of custom rules (require specific tags, enforce naming conventions, etc) that can't be enforced via tflint. It's based on https://github.com/elmundio87/terraform_validate.
+    entry: tfrules.sh
     language: script
     files: \.tf$
     exclude: \.+.terraform\/.*$

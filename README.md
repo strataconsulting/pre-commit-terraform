@@ -10,6 +10,6 @@ An example `.pre-commit-config.yaml`:
     hooks:
       -   id: terraform_fmt
       -   id: tflint
-      -   id: terralint
+      -   id: tfrules
 
 ```
